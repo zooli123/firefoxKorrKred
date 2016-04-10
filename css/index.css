@@ -5,17 +5,20 @@
   margin-top: 10px !important;;
 }
 
-#count {
-  background-color: #919191;
+.button {
+  background-color: #919191 !important;
+}
+
+#count{
   margin-top: 10px;
 }
 
-#count:hover, #count:active{
-  background-color: grey;
+.button:hover, .button:active{
+  background-color: grey !important;
 }
 
 #drawer header {
-  background-color: #7ABFD6;
+  background-color: #7ABFD6 !important;
 }
 
 #indexes {

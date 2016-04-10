@@ -2,7 +2,7 @@
   "name": "KorrKred for FirefoxOS",
   "description": "Helps to count semester's result.",
 
-  "launch_path": "/index.html",
+  "launch_path": "/prepare.html",
 
   "icons": {
     "512": "/img/icon-512.png",

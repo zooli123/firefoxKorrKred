@@ -6,6 +6,7 @@ var creditIndex;
 var kki;
 
 
+loadData();
 $("#count").on("click", function(){
   correctInputs();
   countKKI();
@@ -13,6 +14,23 @@ $("#count").on("click", function(){
   $("#kki").text(kki);
   $("#ki").text(creditIndex.toFixed(2));
 });
+
+
+$("#saveSemester").on("click", function(){
+  save();
+  window.location.href = "saveKKI.html";
+})
+
+
+$("#calculateSemester").on("click", function(){
+   window.location.href = "index.html";
+})
+
+
+$("#loadSemester").on("click", function(){
+   window.location.href = "loadKKI.html";
+})
+
 
 
 function correctInputs(){
@@ -63,4 +81,22 @@ function countKKI(){
   countKI();
   countCredits();
   kki = (creditIndex * completed / all).toFixed(2);
+}
+
+
+function save(){
+  window.sessionStorage.setItem ("grade5", $("#grade5").val());
+  window.sessionStorage.setItem ("grade4", $("#grade4").val());
+  window.sessionStorage.setItem ("grade3", $("#grade3").val());
+  window.sessionStorage.setItem ("grade2", $("#grade2").val());
+  window.sessionStorage.setItem ("grade1", $("#grade1").val());
+}
+
+
+function loadData(){
+  Number($("#grade5").val(window.sessionStorage.getItem("grade5")));
+  Number($("#grade4").val(window.sessionStorage.getItem("grade4")));
+  Number($("#grade3").val(window.sessionStorage.getItem("grade3")));
+  Number($("#grade2").val(window.sessionStorage.getItem("grade2")));
+  Number($("#grade1").val(window.sessionStorage.getItem("grade1")));
 }
