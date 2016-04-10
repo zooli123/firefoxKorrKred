@@ -1,0 +1,22 @@
+.button {
+  background-color: #5AAFCC !important;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.button:hover, .button:active{
+  background-color: #43A4C4 !important;
+}
+
+#drawer header {
+  background-color: #7ABFD6 !important;
+}
+
+#saveName{
+  margin-left: 10%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 80%;
+  border-radius: 7px;
+  text-align: center;
+}

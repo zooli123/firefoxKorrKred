@@ -90,6 +90,8 @@ function countKKI(){
     kki = (creditIndex * completed / all).toFixed(2);
   else
     kki = (0).toFixed(2);
+
+  setKKIBackgroundColor(kki);
 }
 
 
@@ -140,4 +142,19 @@ function clearSession(){
   window.sessionStorage.setItem ("grade3", false);
   window.sessionStorage.setItem ("grade2", false);
   window.sessionStorage.setItem ("grade1", false);
+}
+
+
+function setKKIBackgroundColor(kki){
+  var area = $("#kki");
+  if(kki < 1.5)
+    area.css("background", "#FFA6A6");
+  else if(kki < 2.5)
+    area.css("background", "#FCFFA8");
+  else if(kki < 3.3)
+    area.css("background", "#FEFFEB");
+  else if(kki < 4.2)
+    area.css("background", "#D6F5CB");
+  else
+    area.css("background", "#ABF593");
 }

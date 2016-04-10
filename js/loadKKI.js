@@ -7,7 +7,6 @@ function createList(){
     var request = window.indexedDB.open ("KKICounter", 1);
 
     request.onsuccess = function (e) {
-        console.log ("OnSuccess");
         var db = e.target.result;
 
         var transaction = db.transaction (["Semesters"], "readonly");
@@ -30,7 +29,8 @@ function createList(){
                 var c1 = value.c1 != "" ? parseInt(value.c1) : 0;
                 allData[name] = '{"c5":' + c5 + ',"c4":' + c4 + ',"c3":' + c3 + ',"c2":' + c2 + ',"c1":' + c1 + '}';
                 var li = document.createElement ("li");
-                li.innerHTML = "<p class='loadableSemester'>" + name + "</p>";
+                li.className = 'loadableSemester';
+                li.innerHTML = name;
                 list.appendChild (li);
                 cursor.continue ();
             }

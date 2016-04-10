@@ -1,14 +1,41 @@
 .gradeInput {
-  width: 20% !important;
+  width: 70px !important;
   height: 10% !important;
   font-size: 20px !important;
   margin-left: 15px !important;
   margin-bottom: 5px !important;
   margin-top: 10px !important;
+  box-shadow: 10px 10px 5px black !important;
+}
+
+.gradeInput:focus{
+  box-shadow: 0px 0px 0px black !important;
+  margin-left: 25px !important;
+  margin-top: 20px !important;
+}
+
+#grade5{
+  background-color: #ABF593;
+}
+
+#grade4{
+  background-color: #D6F5CB;
+}
+
+#grade3{
+  background-color: #FEFFEB;
+}
+
+#grade2{
+  background-color: #FCFFA8;
+}
+
+#grade1{
+  background-color: #FFA6A6;
 }
 
 .button {
-  background-color: #919191 !important;
+  background-color: #5AAFCC !important;
   width: 50%;
   margin-left: 25%;
 }
@@ -18,7 +45,7 @@
 }
 
 .button:hover, .button:active{
-  background-color: grey !important;
+  background-color: #43A4C4 !important;
 }
 
 #drawer header {
@@ -29,7 +56,7 @@
   display: none;
   position: absolute;
   font-size: 20px;
-  left: 24%;
+  left: 26%;
   top: 60px;
 
 }
@@ -45,9 +72,8 @@
   width: 50%;
   font-size: 30px !important;
   margin-top: 15px;
-  margin-right: 25% !important;
+  margin-right: 22% !important;
   padding: 14px;
-  background: #ABF593;
   border-radius: 8px;
   text-align: center;
 }
