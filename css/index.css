@@ -36,3 +36,7 @@
 #kki, #ki {
   float:right;
 }
+
+#clearFields{
+  display: none;
+}

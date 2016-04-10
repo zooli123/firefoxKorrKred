@@ -7,6 +7,8 @@ var kki;
 
 
 loadData();
+checkFields();
+
 $("#count").on("click", function(){
   correctInputs();
   countKKI();
@@ -15,22 +17,27 @@ $("#count").on("click", function(){
   $("#ki").text(creditIndex.toFixed(2));
 });
 
+$("#clearFields").on("click",function(){
+  clearData();
+});
 
 $("#saveSemester").on("click", function(){
   save();
   window.location.href = "saveKKI.html";
-})
-
+});
 
 $("#calculateSemester").on("click", function(){
-   window.location.href = "index.html";
-})
-
+  clearSession();
+  window.location.href = "index.html";
+});
 
 $("#loadSemester").on("click", function(){
    window.location.href = "loadKKI.html";
-})
+});
 
+inputs.on("change", function(){
+  checkFields();
+});
 
 
 function correctInputs(){
@@ -99,4 +106,36 @@ function loadData(){
   Number($("#grade3").val(window.sessionStorage.getItem("grade3")));
   Number($("#grade2").val(window.sessionStorage.getItem("grade2")));
   Number($("#grade1").val(window.sessionStorage.getItem("grade1")));
+}
+
+function clearData(){
+  clearSession();
+  location.reload();
+}
+
+
+function checkFields(){
+  if( Number($("#grade5").val()) != 0 ||
+      Number($("#grade4").val()) != 0 ||
+      Number($("#grade3").val()) != 0 ||
+      Number($("#grade2").val()) != 0 ||
+      Number($("#grade1").val()) != 0 ||
+      Number($("#grade5").val()) != "" ||
+      Number($("#grade4").val()) != "" ||
+      Number($("#grade3").val()) != "" ||
+      Number($("#grade2").val()) != "" ||
+      Number($("#grade1").val()) != "" )
+  {
+    $("#clearFields").css("display", "initial");
+  }
+}
+
+
+function clearSession(){
+  window.sessionStorage.setItem ("Name", false);
+  window.sessionStorage.setItem ("grade5", false);
+  window.sessionStorage.setItem ("grade4", false);
+  window.sessionStorage.setItem ("grade3", false);
+  window.sessionStorage.setItem ("grade2", false);
+  window.sessionStorage.setItem ("grade1", false);
 }
