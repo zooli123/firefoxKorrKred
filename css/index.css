@@ -1,0 +1,35 @@
+.gradeInput {
+  width: 20% !important;
+  margin-left: 15px !important;
+  margin-bottom: 5px !important;;
+  margin-top: 10px !important;;
+}
+
+#count {
+  background-color: #919191;
+  margin-top: 10px;
+}
+
+#count:hover, #count:active{
+  background-color: grey;
+}
+
+#drawer header {
+  background-color: #7ABFD6;
+}
+
+#indexes {
+  display: none;
+  position: absolute;
+  font-size: 14px !important;
+  left: 30%;
+  top: 60px;
+}
+
+.tableTitle{
+  padding-right: 10px !important;
+}
+
+#kki, #ki {
+  float:right;
+}

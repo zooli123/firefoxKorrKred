@@ -1,0 +1,17 @@
+{
+  "name": "KorrKred for FirefoxOS",
+  "description": "Helps to count semester's result.",
+
+  "launch_path": "/index.html",
+
+  "icons": {
+    "512": "/img/icon-512.png",
+    "128": "/img/icon-128.png"
+  },
+
+  "developer": {
+    "name": "Szabó Zoltán János"
+  },
+
+  "default_locale": "hu"
+}
