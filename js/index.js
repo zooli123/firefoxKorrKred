@@ -27,7 +27,6 @@ $("#saveSemester").on("click", function(){
 });
 
 $("#calculateSemester").on("click", function(){
-  clearSession();
   window.location.href = "index.html";
 });
 
@@ -87,7 +86,10 @@ function countKKI(){
   countSum();
   countKI();
   countCredits();
-  kki = (creditIndex * completed / all).toFixed(2);
+  if(all > 0)
+    kki = (creditIndex * completed / all).toFixed(2);
+  else
+    kki = (0).toFixed(2);
 }
 
 

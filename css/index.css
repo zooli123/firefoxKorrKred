@@ -1,16 +1,20 @@
 .gradeInput {
   width: 20% !important;
+  height: 10% !important;
+  font-size: 20px !important;
   margin-left: 15px !important;
-  margin-bottom: 5px !important;;
-  margin-top: 10px !important;;
+  margin-bottom: 5px !important;
+  margin-top: 10px !important;
 }
 
 .button {
   background-color: #919191 !important;
+  width: 50%;
+  margin-left: 25%;
 }
 
 #count{
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .button:hover, .button:active{
@@ -24,17 +28,28 @@
 #indexes {
   display: none;
   position: absolute;
-  font-size: 14px !important;
-  left: 30%;
+  font-size: 20px;
+  left: 24%;
   top: 60px;
+
 }
 
-.tableTitle{
-  padding-right: 10px !important;
-}
 
 #kki, #ki {
-  float:right;
+  margin-right: 20px !important;
+  margin-left: 20px !important;
+  float: right;
+}
+
+#kki{
+  width: 50%;
+  font-size: 30px !important;
+  margin-top: 15px;
+  margin-right: 25% !important;
+  padding: 14px;
+  background: #ABF593;
+  border-radius: 8px;
+  text-align: center;
 }
 
 #clearFields{
