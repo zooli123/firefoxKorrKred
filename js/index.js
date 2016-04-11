@@ -34,6 +34,10 @@ $("#loadSemester").on("click", function(){
    window.location.href = "loadKKI.html";
 });
 
+$("#deleteSemester").on("click", function(){
+   window.location.href = "deleteKKI.html";
+});
+
 inputs.on("change", function(){
   checkFields();
 });

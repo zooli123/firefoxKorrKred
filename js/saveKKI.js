@@ -24,6 +24,9 @@ function save(){
       transaction.oncomplete = function () {
         db.close ();
       };
+      transaction.onerror = function() {
+        db.close();
+      }
 
       var store = transaction.objectStore ("Semesters");
       if(name == ""){
@@ -39,12 +42,18 @@ function save(){
                                c1:    savedGrade1});
         save.onsuccess = function (e) {
           console.log (e);
+          $("#successfulSave").fadeIn();
+          $("#successfulSave").css("display", "block");
+          disappear($("#successfulSave"));
         };
 
         save.onerror = function (e) {
-          console.log (e);
+          console.log(e);
+          alert("Ez a név már foglalt");
+          $("#save").prop("disabled", false);
         };
       }
+
   };
 
   request.onerror = function (e) {
@@ -59,4 +68,12 @@ function setGradesToInitial(){
   window.sessionStorage.setItem ("grade3", "");
   window.sessionStorage.setItem ("grade2", "");
   window.sessionStorage.setItem ("grade1", "");
+}
+
+function disappear(element){
+  setTimeout(function(){element.fadeOut();},2000);
+}
+
+function appear(element){
+  setTimeout(function(){element.fadeIn();},2000);
 }

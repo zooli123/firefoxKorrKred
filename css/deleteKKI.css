@@ -14,12 +14,12 @@
 
 
 .loadableSemester:hover, .loadableSemester:active, .loadableSemester:focus{
-  background-color: #43A4C4 !important;
+  background-color: #B87777 !important;
 }
 
 .loadableSemester{
   list-style-type: none !important;
-  background-color: #5AAFCC !important;
+  background-color: #C48B8B !important;
   font-size: 20px;
   color: #FEFFEB;
   border-radius: 10px;

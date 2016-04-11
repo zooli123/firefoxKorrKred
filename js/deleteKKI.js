@@ -45,16 +45,46 @@ function createList(){
 window.addEventListener ("click", function (evt) {
     if (evt.target.className != "") {
         var name = evt.target.innerHTML;
-        var data = JSON.parse(allData[name]);
-        window.sessionStorage.setItem ("Name", name);
-        window.sessionStorage.setItem("grade5", data["c5"]);
-        window.sessionStorage.setItem("grade4", data["c4"]);
-        window.sessionStorage.setItem("grade3", data["c3"]);
-        window.sessionStorage.setItem("grade2", data["c2"]);
-        window.sessionStorage.setItem("grade1", data["c1"]);
-        window.location.href = "index.html";
+        deleteElement(name);
     }
-
     else {
     }
 });
+
+function deleteElement(name){
+    var DBOpenRequest = window.indexedDB.open("KKICounter", 1);
+
+    DBOpenRequest.onsuccess = function(event) {
+
+      db = DBOpenRequest.result;
+
+      deleteData(name);
+    };
+}
+
+function deleteData(name) {
+  var transaction = db.transaction(["Semesters"], "readwrite");
+
+  transaction.oncomplete = function(event) {
+    db.close();
+    console.log(event);
+  };
+
+
+  transaction.onerror = function(event) {
+    db.close();
+    console.log(event);
+  };
+
+  var objectStore = transaction.objectStore("Semesters");
+
+  var objectStoreRequest = objectStore.delete(name);
+
+  objectStoreRequest.onsuccess = function(event) {
+    db.close();
+    console.log(event);
+    $(".loadableSemester").remove();
+    navigator.vibrate(1000);
+    location.reload();
+  };
+};

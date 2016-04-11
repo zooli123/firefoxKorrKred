@@ -13,5 +13,6 @@
     "name": "Szabó Zoltán János"
   },
 
-  "default_locale": "hu"
+  "default_locale": "hu",
+  "orientation": ["portrait-primary"]
 }
