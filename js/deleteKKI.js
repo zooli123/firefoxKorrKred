@@ -84,7 +84,7 @@ function deleteData(name) {
     db.close();
     console.log(event);
     $(".loadableSemester").remove();
-    navigator.vibrate(1000);
+    navigator.vibrate(500);
     location.reload();
   };
 };

@@ -1,5 +1,5 @@
 {
-  "name": "KorrKred for FirefoxOS",
+  "name": "KorrKred",
   "description": "Helps to count semester's result.",
 
   "launch_path": "/prepare.html",
