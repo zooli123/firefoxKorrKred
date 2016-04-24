@@ -44,6 +44,7 @@ function createList(){
 
 window.addEventListener ("click", function (evt) {
     if (evt.target.className != "") {
+        $(evt.target).css("display", "none");
         var name = evt.target.innerHTML;
         deleteElement(name);
     }
@@ -83,8 +84,6 @@ function deleteData(name) {
   objectStoreRequest.onsuccess = function(event) {
     db.close();
     console.log(event);
-    $(".loadableSemester").remove();
     navigator.vibrate(500);
-    location.reload();
   };
 };

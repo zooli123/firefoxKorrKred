@@ -14,5 +14,6 @@
   },
 
   "default_locale": "hu",
-  "orientation": ["portrait-primary"]
+  "orientation": ["portrait-primary"],
+  "version": "1.01"
 }
